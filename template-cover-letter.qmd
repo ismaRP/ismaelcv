@@ -1,0 +1,47 @@
+---
+format:
+  modern2-cover-letter-pdf: default
+author: Ismael Rodríguez Palomo
+date: today
+date-format: long
+
+cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
+cvcolor: 
+  main: B83B5E
+  accent: 6A2C70
+  
+title: Cover letter
+sub-title: 'Postdoctoral Researcher in Bioinformatics & Ancient Proteomics'
+
+contact:
+  street: Georg Brandes Plads 4, V415
+  zip: 1307
+  city: Copenhagen
+  phone: +45 60907016
+  mail: ismael@palaeome.org
+  
+organization: 
+  contact-person: Professor Matthew Collins
+  name: Globe Institute, University of Copenhagen
+  street: Øster Farimagsgade 5
+  zip: 1353
+  city: Copenhagen
+---
+
+Dear hiring committee,
+
+I am writing to express my enthusiastic interest in the Postdoctoral Researcher in Bioinformatics & Ancient Proteomics position in the CODICUM project. With a strong foundation in palaeoproteomics, computational analysis, and a passion for manuscripts, I am excited by the opportunity to contribute to this interdisciplinary exploration of medieval manuscript fragments, the networks they reveal, and how they interconnect the Nordic region. My academic and research trajectory has been a journey bridging biomolecular sciences, archaeology and cultural heritage. It started on the biomolecular sciences with a degree in Biotechnology and masters in Bionformatics, after which I worked in biomedical research. At this point, an opportunity to start working in palaeoproteomics opened. I was fascinated by the passion and enthusiasm of the new colleagues I met, and the possibility of combining my scientific curiosity and my deep interest in history and politics since I was young.
+
+For seven years, I have honed my skills in R and Python, developing and documenting packages, pipelines, documents, and dashboards, using Rmarkdown, Jupyter and then Quarto. My expertise encompasses a wide range of statistical modelling techniques, particularly those applied to proteomics, ancient proteins and archaeology, combined with complex data handling and visualisation. Throughout my doctoral research and previous roles at the University of Copenhagen, I have developed pipelines for MALDI-TOF ZooMS, LC-MS/MS data processing, open search identification, and deamidation analysis. My published work on the Parchment Glutamine Index (PQI) offers a novel method to assess glutamine deamidation in collagen from MALDI-TOF data, directly applicable to CODICUM’s aims of identifying production patterns and tracing parchment origins and connections.
+
+The requirement for unsupervised cluster analysis and statistical modelling to explore parchment production and knowledge networks resonates with my experience in multivariate and machine learning techniques. During my PhD and the previous Research Assistant position within the Beasts2Craft project, I applied these approaches to identify batch effects and production groups in high-throughput ZooMS datasets, in interdisciplinary teams combining, biomolecular, archaeological, and visual exploration of parchments —as demonstrated in the iScience paper “A biological reading of a palimpsest.”
+
+I have also created open-source tools (e.g., MALDIpqi, MALDIzooMS, DataAnalysisZooMS) and actively promoted and championed FAIR data principles and open science in palaeoproteomics and specifically in ZooMS. I believe this will be of paramount importance in the CODICUM project in order to combine diverse biocodicological and historical data from the parchment fragments.
+
+As an advocate for open science and software, a collaborative team player and a good listener, I strive to learn and create a positive and inclusive work environment where we all thrive. As it is also detailed in my CV, I have a strong dedication to continuous learning, teaching, and disseminating my research.
+
+Thank you for considering my application. I have attached my CV for your review and look forward to discussing my qualifications in more detail at your convenience.
+
+Yours sincerely,
+
+Ismael Rodríguez Palomo

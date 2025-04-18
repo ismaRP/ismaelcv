@@ -1,0 +1,254 @@
+---
+title: Untitled
+format:
+  modern2-cv-pdf: default
+author: "Ismael Rodríguez"
+cvfont: raleway #raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
+cvcolor: 
+  main: B83B5E
+  accent: 6A2C70
+jobtitle: "Bioinformatics &\\newline Ancient proteins"
+sidebar:
+  #image: portrait.jpg
+  sections:
+    - name: Contact
+      items:
+        - icon: map-marker
+          text: Copenhagen, Denmark
+        - icon: phone
+          text: "+45 60907016"
+        - icon: envelope
+          text: ismael@palaeome.org
+        # - icon: home
+        #   text: mr.schochastics.net
+        #   href: https://mr.schochastics.net
+        - icon: github
+          text: github.com/ismarp
+          href: https://github.com/ismarp
+        - icon: linkedin
+          text: LinkedIn
+          href: https://www.linkedin.com/in/ismael-rodr%C3%ADguez-palomo-999993153/
+    - name: Skills
+      items:
+        - text: "Python & R"
+          background1: "Jupyter, Quarto, Shiny, Plotly"
+          background2: "R for MS, pyOpenMS, Pyteomics"
+        - text: "Systems"
+          background1: "Linux & Git"
+          background2: "High Performance Computing"
+        - text: "Palaeoproteomics data analysis"
+          background1: "LC-MS/MS"
+          background2: "MALDI-TOF ZooMS"
+          background3: "Open search, \\textit{de novo}"
+        - text: "Statistics & ML"
+          background1: "Statistical modelling"
+          background2: "Deep learning and LLMs"
+    - name: Education
+      items:
+        - text: "PhD in Palaeoproteomics "
+          inst: "University of Cambridge"
+          time: "09/2021 - 12/2024"
+          #details: "Thesis: Computational methods in palaeoproteomics: making the most of mass spectrometry data"
+        - text: "MSc in Bioinformatics"
+          inst: "University of Copenhagen"
+          time: "09/2017 - 09/2019"
+          #details: "Thesis: Assessing deamidation patterns in collagen from ancient sites by mining mass-spectrometry data"
+        - text: "BSc in Biotechnology"
+          inst: "Technical University of Madrid"
+          time: "09/2012 - 07/2016"
+    - name: Languages
+      items:
+        - lang: Spanish
+          level: Native
+        - lang: English
+          level: Fluent, scientific and professional
+        - lang: Portuguese
+          level: Fluent conversation
+          #details: "Computational Biology"
+    # - name: Skills
+    #   items:
+    #     - text: Python & Jupyter
+    #       exp: 
+    #         text: "6 years."
+    #         num: 0.8
+    #     - text: R, Rmarkdown, Quarto
+    #       exp: 
+    #         text: "6 years."
+    #         num: 0.7
+    #     - text: High Performance Computing
+    #       exp: 
+    #         text: "6 yearsr"
+    #         num: 0.7
+    #     - text: Pipelines, Snakemake
+    #       exp: 
+    #         text: "3 years"
+    #         num: 0.3
+    - name: "Dissemination"
+      items:
+        - text: "Care and Conservation of Manuscrips 20th seminar"
+          org: "Arnamagnæan Institute, Department of Nordic Studies and Linguistics"
+          details: "ZooMS data reveals variation in parchment manufacturing methods over a millenium"
+        - text: "Arch-Sci Pitt-Rivers Seminars"
+          org: "Department of Archaeology. University of Cambridge"
+          details: "Challenges, approaches and insights on palaeoproteomic analysis on ceramics"
+        - text: "Integrating ZooMS and Zooarchaeology, methodological challenges and interpretive potentials"
+          org: "University of Kent"
+          details: "High-throughput analysis and batch effect in ZooMS MALDI-TOF data"
+        - text: "PAASTA monthly talks"
+          org: "Palaeoproteomics and Archaeology, Society for Techniques and Advances"
+          details: "Benchmarking the identification of a single degraded protein to explore optimal
+                    search strategies for ancient proteins"
+        - text: "EuBIC-MS Winter School 2022"
+          org: "European Bioinformatics Community for Mass Spectrometry"
+          details: "Parchment Glutamine Index (PQI): A novel method to estimate glutamine
+                    deamidation levels in parchment collagen obtained from low-quality MALDI-TOF data"
+execute: 
+  echo: false
+---
+
+```{r}
+#| label: cvevents
+cvevents <- function(tbl, when, what, where, descr) {
+
+    command_start <- "\\cvevent"
+    tbl[[where]] <- gsub("\n", " \\\\newline ", tbl[[where]])
+    res <- paste0(
+        command_start, "{", tbl[[when]], "}", 
+        "{", tbl[[what]], "}",
+        "{", tbl[[where]], "}",
+        "{", tbl[[descr]], "}"
+        )
+
+    cat(res, sep = "\n\n\n")
+}
+
+cvteach <- function(tbl, when, what, where, descr) {
+
+    command_start <- "\\cvteach"
+    tbl[[where]] <- gsub("\n", " \\\\newline ", tbl[[where]])
+    res <- paste0(
+        command_start, "{", tbl[[when]], "}", 
+        "{", tbl[[what]], "}",
+        "{", tbl[[where]], "}",
+        "{", tbl[[descr]], "}"
+        )
+
+    cat(res, sep = "\n\n\n")
+}
+
+cvproj <- function(tbl,what,items,descr){
+    command_start <- "\\cvproj"
+    res <- paste0(
+        command_start, "{", tbl[[what]], "}",
+        "{", sapply(tbl[[items]], function(x)paste0(x,collapse = ", ")), "}",
+        "{", tbl[[descr]], "}"
+    )
+
+    cat(res, sep = "\n\n\n")
+}
+```
+
+<!-- # About me
+I am a curious and seasoned computational biologist with experience in palaeoproteomics, mass spectrometry and statistics.
+I have expertise developing R and Python packages, pipelines, documents and dashboards. With the programming skill set and strong foundation knowledge of statistics, I believe I can make a positive impact at Omicron. As an advocate for open science and software, a collaborative team player and a good listener, I strive to learn and create a positive and inclusive work environment where innovation thrives.
+-->
+
+
+\hfill\break
+# Experience
+
+```{r}
+#| label: experience
+#| output: asis
+tibble::tribble(
+    ~role, ~institution, ~dates, ~details,
+    
+    "PlaCe ITN MSCA-ERC PhD - Ancient proteins",
+    "Department of Archaeology -\nMcDonald Institute for Archaeological Research\nUniversity of Cambridge",
+    "09/2021 - 12/2024",
+    "I developed software packages and pipelines to process mass spectrometry data on ceramics, bone and parchment. I pioneered the use of \\textit{open search} software for LC-MS/MS and R and Python for high throughput analysis of ZooMS data.",
+    
+    "Research Assistant - Ancient proteins",
+    "Globe Intitute\nUniversity of Copenhagen",
+    "04/2020 - 09/2021",
+    "Within the Beasts2Craft project, I carried out computational analysis of ZooMS MALDI-TOF and LC-MS/MS data for palaeoproteomics. My tasks also involved server administration.",
+    
+    "Research Assistant - scRNA-seq Transcriptomics",
+    "Department of Biomedical Sciences\nUniversity of Copenhagen",
+    "06/2019 - 12/2019",
+    "Using R, I analyzed single-cell RNA-seq to understand molecular mechanisms, especially those impacting ion channels, involved in heart remodelling in arrhythmia.",
+    
+    "Master thesis student in Palaeoproteomics",
+    "Globe Intitute\nUniversity of Copenhagen",
+    "04/2019 - 10/2019",
+    "Thesis: Assessing deamidation patterns in collagen from ancient sites by mining mass-spectrometry data.\\newline
+     Bioinformatics Project: Methodological comparison of Hi-C and shotgun sequencing data from ancient samples",
+    
+    "Student Assistant - RNA-seq Transcriptomics",
+    "Department of Biomedical Sciences\nUniversity of Copenhagen",
+    "05/2018 - 05/2019",
+    "I conducted novel analysis of miRNA-mRNA networks involved in structural remodelling of the heart in arrhythmia.
+    I analysed and integrated RNAseq and miRNA microarray transcriptomics data using R and Python.",
+) |>
+    cvevents(when = "dates", what = "role", where = "institution", descr = "details")
+```
+
+# Teaching
+
+```{r}
+#| label: teaching
+#| output: asis
+tibble::tribble(
+  ~role, ~institution, ~dates, ~details,
+  "Supervisor - BA (Hons) Archaeology",
+  "University of Cambridge",
+  "10/2022 - 5/2023",
+  "Conducting small group sessions with undergraduates to work on exercises, essays and explore topics further.",
+  
+  "Practicals coordinator - Palaeoproteomics Summer School",
+  "University of Copenhagen",
+  "8/2021",
+  "Organising, teaching and conducting practical palaeoproteomics sessions.",
+  
+  "HPC and Linux workshops",
+  "University of Copenhagen",
+  "3/2021",
+  "Organising and delivering workshops on Linux and HPC and R."
+) |>
+  cvteach(when = "dates", what = "role", where = "institution", descr = "details")
+```
+
+\newpage
+
+# Projects
+
+This is a list of software projects for ZooMS and LC-MS/MS in palaeoproteomics.
+See my [github profile](https://github.com/ismaRP) for a comprehensive list of open source projects.
+\newline
+
+```{r}
+#| label: proj
+#| output: asis
+tibble::tribble(
+    ~what, ~items, ~descr,
+    "R and Python data analysis for ZooMS",
+    c("DataAnalysisZooMS (Quarto Web)", "RegExTractor", "MALDIzooMS and MALDIpqi (packages)"),
+    "Suite of R and Python workflows to process and analyze MALDI-TOF data for ZooMS on parchment and bone",
+    "Python packages for proteomics.",
+    c("MSMSdeamidation", "PalaeoPSM", "setMQrun", "PPbenchmark"),
+    "Tools to set up software runs for and process LC-MS/MS, PSM and PTM data.",
+    "The Archaeoriddle challenge.",
+    c("Archaeoriddle book", "Archaeoriddle package"),
+    "Assessing quantitative methods in archaeology via simulated datasets."
+) |>
+    cvproj(what = "what", items = "items", descr = "descr")
+
+```
+
+---
+nocite: |
+  @*
+---
+
+
+# Publications
